@@ -22,106 +22,64 @@
     -webkit-font-smoothing: antialiased; }
   body { padding-bottom: 220px; }
   .app { max-width: 680px; margin: 0 auto; padding: 20px 16px; }
-  .title-row { display: flex; justify-content: space-between; align-items: center;
-    margin-bottom: 16px; gap: 10px; }
+  .title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; gap: 10px; }
   h1 { font-size: 22px; margin: 0; }
-  .btn-ghost { background: transparent; border: 1px solid var(--border);
-    color: var(--muted); padding: 6px 12px; border-radius: 8px;
-    font-size: 13px; cursor: pointer; white-space: nowrap; }
+  .btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 6px 12px; border-radius: 8px; font-size: 13px; cursor: pointer; white-space: nowrap; }
   .btn-ghost:active { background: var(--card); }
-  .tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px;
-    scrollbar-width: none; }
+  .tabs { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
   .tabs::-webkit-scrollbar { display: none; }
-  .tab { flex: 0 0 auto; min-width: 48px; background: var(--card);
-    border: 1px solid var(--border); color: var(--muted); padding: 10px 12px;
-    border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer;
-    transition: all 0.15s; }
+  .tab { flex: 0 0 auto; min-width: 48px; background: var(--card); border: 1px solid var(--border); color: var(--muted); padding: 10px 12px; border-radius: 10px; font-weight: 700; font-size: 13px; cursor: pointer; transition: all 0.15s; }
   .tab.active { background: var(--accent); border-color: var(--accent); color: #0b0d12; }
-  .day-header { margin: 20px 0 12px; display: flex; justify-content: space-between;
-    align-items: flex-end; gap: 10px; }
+  
+  .day-header { margin: 20px 0 12px; display: flex; justify-content: space-between; align-items: flex-end; gap: 10px; }
   .day-header h2 { margin: 0; font-size: 18px; }
   .day-subtitle { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
-  .btn-reset-day { background: transparent; border: 1px solid var(--border);
-    color: var(--muted); padding: 6px 10px; border-radius: 8px; font-size: 12px;
-    cursor: pointer; white-space: nowrap; }
-  .btn-reset-day:active { background: var(--card); }
+  .btn-reset-day { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 6px 10px; border-radius: 8px; font-size: 12px; cursor: pointer; white-space: nowrap; }
+  
   .progress-wrap { margin-bottom: 16px; }
-  .progress-info { display: flex; justify-content: space-between;
-    font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .progress-info { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 6px; }
   .progress-info strong { color: var(--text); }
   .progress-bar { height: 6px; background: var(--card); border-radius: 3px; overflow: hidden; }
   .progress-fill { height: 100%; background: var(--accent); width: 0%; transition: width 0.3s; }
 
-  .exercise { background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 14px; margin-bottom: 10px;
-    transition: opacity 0.2s, border-color 0.2s; }
+  .exercise { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 10px; transition: opacity 0.2s, border-color 0.2s; }
   .exercise.completed { opacity: 0.7; border-color: var(--accent-dark); }
-  .exercise-head { display: flex; justify-content: space-between;
-    align-items: flex-start; gap: 10px; margin-bottom: 8px; }
-  .exercise-name { font-size: 15px; font-weight: 600; line-height: 1.3; flex: 1; }
-  .exercise-badge { display: inline-block; font-size: 10px; padding: 2px 6px;
-    border-radius: 4px; background: var(--card2); color: var(--muted);
-    margin-left: 6px; vertical-align: middle; font-weight: 700;
-    letter-spacing: 0.5px; }
+  .exercise-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; margin-bottom: 4px; }
+  .exercise-title-wrap { flex: 1; }
+  .exercise-name { font-size: 15px; font-weight: 600; line-height: 1.3; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+  .btn-swap { background: none; border: none; color: var(--accent); font-size: 16px; cursor: pointer; padding: 0; }
+  .exercise-badge { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 4px; background: var(--card2); color: var(--muted); font-weight: 700; letter-spacing: 0.5px; }
   .exercise-badge.opt { background: #3b2e0f; color: var(--warn); }
   .exercise-meta { font-size: 12px; color: var(--muted); white-space: nowrap; }
-  .exercise-sub { display: flex; justify-content: space-between;
-    align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .exercise-muscles { font-size: 11px; color: #86efac; margin-bottom: 10px; font-style: italic; }
+  .exercise-sub { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
   .last-session { font-size: 11px; color: var(--muted); font-style: italic; }
   .last-session.has { color: #86efac; }
-  .btn-bump { background: var(--card2); border: 1px solid var(--border);
-    color: var(--accent); padding: 4px 8px; border-radius: 6px;
-    font-size: 11px; font-weight: 700; cursor: pointer; }
-  .btn-bump:active { transform: scale(0.95); }
+  .btn-bump { background: var(--card2); border: 1px solid var(--border); color: var(--accent); padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: 700; cursor: pointer; }
 
   .set-row { display: flex; align-items: center; gap: 8px; padding: 5px 0; }
-  .set-check { width: 38px; height: 38px; border-radius: 50%;
-    border: 2px solid var(--border); background: transparent;
-    color: var(--muted); font-weight: 700; font-size: 14px;
-    cursor: pointer; transition: all 0.12s; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center; }
-  .set-check:active { transform: scale(0.92); }
+  .set-check { width: 38px; height: 38px; border-radius: 50%; border: 2px solid var(--border); background: transparent; color: var(--muted); font-weight: 700; font-size: 14px; cursor: pointer; transition: all 0.12s; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
   .set-check.done { background: var(--accent); border-color: var(--accent); color: #0b0d12; }
-  .set-input { width: 62px; padding: 8px 4px; text-align: center;
-    background: var(--bg2); border: 1px solid var(--border); border-radius: 8px;
-    color: var(--text); font-size: 14px; font-weight: 600;
-    font-variant-numeric: tabular-nums; -moz-appearance: textfield; }
-  .set-input::-webkit-outer-spin-button,
-  .set-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  .set-input { width: 62px; padding: 8px 4px; text-align: center; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; font-weight: 600; font-variant-numeric: tabular-nums; -moz-appearance: textfield; }
   .set-input:focus { outline: none; border-color: var(--accent); }
   .set-input::placeholder { color: #4b5563; }
   .set-unit { font-size: 12px; color: var(--muted); font-weight: 600; }
   .set-x { color: var(--muted); font-weight: 700; font-size: 13px; }
 
-  .btn-finish { width: 100%; padding: 14px; margin: 18px 0 8px;
-    background: var(--accent); border: none; border-radius: 12px;
-    color: #0b0d12; font-size: 15px; font-weight: 800; cursor: pointer;
-    letter-spacing: 0.3px; }
+  .btn-finish { width: 100%; padding: 14px; margin: 18px 0 8px; background: var(--accent); border: none; border-radius: 12px; color: #0b0d12; font-size: 15px; font-weight: 800; cursor: pointer; }
   .btn-finish:active { transform: scale(0.98); background: var(--accent-dark); }
-  .btn-finish:disabled { background: var(--card2); color: var(--muted); cursor: not-allowed; }
 
-  .banner { background: linear-gradient(135deg, #1f2937, #111827);
-    border: 1px solid var(--border); border-radius: 14px;
-    padding: 16px; margin-bottom: 14px; text-align: center; }
+  .banner { background: linear-gradient(135deg, #1f2937, #111827); border: 1px solid var(--border); border-radius: 14px; padding: 16px; margin-bottom: 14px; text-align: center; }
   .banner h3 { margin: 0 0 6px; font-size: 15px; }
   .banner p { margin: 0; font-size: 13px; color: var(--muted); }
 
   /* Histórico */
-  .chart-card { background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; padding: 14px; margin-bottom: 12px; }
+  .chart-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px; margin-bottom: 12px; }
   .chart-card h3 { margin: 0 0 10px; font-size: 15px; }
-  .chart-select { width: 100%; padding: 10px; background: var(--bg2);
-    border: 1px solid var(--border); border-radius: 8px;
-    color: var(--text); font-size: 13px; margin-bottom: 12px; }
+  .chart-select { width: 100%; padding: 10px; background: var(--bg2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 13px; margin-bottom: 12px; }
   .chart-canvas { width: 100%; height: 200px; display: block; }
-  .chart-empty { text-align: center; color: var(--muted); font-size: 13px;
-    padding: 30px 0; }
-
-  .history-item { background: var(--card); border: 1px solid var(--border);
-    border-radius: 14px; margin-bottom: 10px; overflow: hidden; }
-  .history-summary { padding: 14px; cursor: pointer; display: flex;
-    justify-content: space-between; align-items: center; gap: 10px; }
-  .history-summary:active { background: var(--card2); }
+  .history-item { background: var(--card); border: 1px solid var(--border); border-radius: 14px; margin-bottom: 10px; overflow: hidden; }
+  .history-summary { padding: 14px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
   .history-date { font-size: 14px; font-weight: 600; }
   .history-info { font-size: 12px; color: var(--muted); margin-top: 3px; }
   .history-chevron { color: var(--muted); font-size: 12px; transition: transform 0.2s; }
@@ -129,51 +87,41 @@
   .history-details { display: none; padding: 0 14px 14px; border-top: 1px solid var(--border); }
   .history-item.open .history-details { display: block; }
   .history-ex { padding: 8px 0; border-bottom: 1px solid var(--card2); }
-  .history-ex:last-child { border-bottom: none; }
   .history-ex-name { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
   .history-ex-sets { font-size: 12px; color: var(--muted); }
-  .history-empty { text-align: center; color: var(--muted); padding: 40px 20px;
-    font-size: 14px; }
-  .history-delete { background: transparent; border: none; color: var(--danger);
-    font-size: 12px; cursor: pointer; padding: 4px 8px; }
+  .history-empty { text-align: center; color: var(--muted); padding: 40px 20px; font-size: 14px; }
+  .history-delete { background: transparent; border: none; color: var(--danger); font-size: 12px; cursor: pointer; padding: 4px 8px; }
 
   /* Timer */
-  .timer-bar { position: fixed; left: 0; right: 0; bottom: 0;
-    background: var(--bg2); border-top: 1px solid var(--border);
-    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-    z-index: 100; display: flex; flex-direction: column; gap: 10px;
-    max-width: 680px; margin: 0 auto; }
+  .timer-bar { position: fixed; left: 0; right: 0; bottom: 0; background: var(--bg2); border-top: 1px solid var(--border); padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); z-index: 100; display: flex; flex-direction: column; gap: 10px; max-width: 680px; margin: 0 auto; }
   .timer-bar.running { border-top-color: var(--accent); }
-  .timer-bar.ringing { animation: ring 0.4s ease-in-out 6; }
-  @keyframes ring { 0%,100% { background: var(--bg2); } 50% { background: #7f1d1d; } }
   .timer-row { display: flex; align-items: center; gap: 6px; }
-  .timer-display { font-family: ui-monospace, "SF Mono", Menlo, monospace;
-    font-variant-numeric: tabular-nums; font-size: 26px; font-weight: 700;
-    letter-spacing: 0.5px; flex: 1; }
+  .timer-display { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-variant-numeric: tabular-nums; font-size: 26px; font-weight: 700; letter-spacing: 0.5px; flex: 1; }
   .timer-bar.running .timer-display { color: var(--accent); }
-  .timer-btn { background: var(--card); border: 1px solid var(--border);
-    color: var(--text); width: 40px; height: 40px; border-radius: 10px;
-    font-size: 15px; cursor: pointer; display: flex; align-items: center;
-    justify-content: center; font-weight: 700; flex-shrink: 0; }
-  .timer-btn:active { transform: scale(0.94); }
-  .timer-btn.primary { background: var(--accent); border-color: var(--accent);
-    color: #0b0d12; width: 48px; height: 44px; font-size: 18px; }
+  .timer-btn { background: var(--card); border: 1px solid var(--border); color: var(--text); width: 40px; height: 40px; border-radius: 10px; font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+  .timer-btn.primary { background: var(--accent); border-color: var(--accent); color: #0b0d12; width: 48px; height: 44px; font-size: 18px; }
   .presets { display: flex; gap: 6px; }
-  .preset { flex: 1; background: var(--card); border: 1px solid var(--border);
-    color: var(--muted); padding: 8px 0; border-radius: 8px;
-    font-size: 12px; font-weight: 700; cursor: pointer; }
+  .preset { flex: 1; background: var(--card); border: 1px solid var(--border); color: var(--muted); padding: 8px 0; border-radius: 8px; font-size: 12px; font-weight: 700; cursor: pointer; }
   .preset.active { background: var(--accent-dark); border-color: var(--accent); color: #fff; }
-  .preset:active { transform: scale(0.97); }
-  .auto-rest-label { display: flex; align-items: center; gap: 8px;
-    font-size: 12px; color: var(--muted); user-select: none; cursor: pointer; }
+  .auto-rest-label { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); user-select: none; cursor: pointer; }
   .auto-rest-label input { accent-color: var(--accent); width: 16px; height: 16px; }
 
+  /* Modal */
+  .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 150; display: none; align-items: center; justify-content: center; padding: 20px; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--card); width: 100%; max-width: 400px; border-radius: 16px; border: 1px solid var(--border); overflow: hidden; display: flex; flex-direction: column; max-height: 80vh; }
+  .modal-header { padding: 16px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .modal-title { font-size: 16px; font-weight: 700; margin: 0; }
+  .modal-close { background: transparent; border: none; color: var(--muted); font-size: 20px; cursor: pointer; padding: 0; }
+  .modal-body { padding: 16px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+  .modal-option { background: var(--bg2); border: 1px solid var(--border); padding: 12px; border-radius: 10px; color: var(--text); font-size: 14px; text-align: left; cursor: pointer; transition: border-color 0.15s; }
+  .modal-option:active { border-color: var(--accent); }
+  .modal-option.current { border-color: var(--accent); background: rgba(34,197,94,0.1); font-weight: 700; }
+  .modal-footer { padding: 12px 16px; border-top: 1px solid var(--border); text-align: right; }
+  .btn-restore { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 8px 12px; border-radius: 8px; font-size: 13px; cursor: pointer; }
+
   /* Toast */
-  .toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px);
-    background: var(--accent); color: #0b0d12; padding: 12px 20px;
-    border-radius: 10px; font-size: 14px; font-weight: 700;
-    z-index: 200; transition: transform 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    max-width: 90vw; text-align: center; }
+  .toast { position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px); background: var(--accent); color: #0b0d12; padding: 12px 20px; border-radius: 10px; font-size: 14px; font-weight: 700; z-index: 200; transition: transform 0.3s; box-shadow: 0 10px 25px rgba(0,0,0,0.4); max-width: 90vw; text-align: center; }
   .toast.show { transform: translateX(-50%) translateY(0); }
 </style>
 </head>
@@ -208,60 +156,73 @@
   </label>
 </div>
 
+<!-- Modal de Substituição -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 class="modal-title">Trocar Exercício</h3>
+      <button class="modal-close" id="modalClose">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <button class="btn-restore" id="btnRestore">Voltar ao original</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
-/* ============ DADOS ============ */
+/* ============ DADOS COMPLETOS COM MÚSCULOS E SUBSTITUIÇÕES ============ */
 const treinos = [
   { id: "segunda", dia: "Segunda", nome: "Upper A — Força", tipo: "força", descanso: 120,
     exercicios: [
-      { nome: "Supino reto no Smith", series: 4, reps: "5–6", rir: "RIR 1–2" },
-      { nome: "Puxada frontal", series: 4, reps: "6–8", rir: "RIR 1–2" },
-      { nome: "Desenvolvimento de ombros (máquina)", series: 3, reps: "6–8", rir: "RIR 1–2" },
-      { nome: "Remada baixa fechada", series: 3, reps: "8–10", rir: "RIR 1–2" },
-      { nome: "Elevação lateral", series: 2, reps: "12–15", rir: "RIR 1" }
+      { nome: "Supino reto no Smith", series: 4, reps: "5–6", rir: "RIR 1–2", musculos: "Peitoral maior, tríceps, deltoide anterior", subs: ["Supino reto com halteres", "Supino reto na máquina", "Flexão de braço com peso"] },
+      { nome: "Puxada frontal", series: 4, reps: "6–8", rir: "RIR 1–2", musculos: "Latíssimo do dorso, bíceps, redondo maior", subs: ["Barra fixa", "Puxada no triângulo", "Puxada unilateral"] },
+      { nome: "Desenvolvimento de ombros (máquina)", series: 3, reps: "6–8", rir: "RIR 1–2", musculos: "Deltoide anterior, deltoide lateral, tríceps", subs: ["Desenvolvimento com halteres", "Desenvolvimento militar no Smith", "Elevação frontal"] },
+      { nome: "Remada baixa fechada", series: 3, reps: "8–10", rir: "RIR 1–2", musculos: "Latíssimo, romboides, trapézio, bíceps", subs: ["Remada curvada com barra", "Remada sentada com halteres", "Remada cavalinho"] },
+      { nome: "Elevação lateral", series: 2, reps: "12–15", rir: "RIR 1", musculos: "Deltoide lateral", subs: ["Elevação lateral na máquina", "Elevação lateral com cabo", "Elevação lateral inclinado"] }
     ] },
   { id: "terca", dia: "Terça", nome: "Lower A — Força", tipo: "força", descanso: 120,
     exercicios: [
-      { nome: "Agachamento no Smith", series: 4, reps: "5–6", rir: "RIR 1–2" },
-      { nome: "Stiff", series: 3, reps: "6–8", rir: "RIR 1–2" },
-      { nome: "Leg press 45°", series: 3, reps: "8–10", rir: "RIR 1–2" },
-      { nome: "Cadeira flexora", series: 2, reps: "10–12", rir: "RIR 1" },
-      { nome: "Panturrilha em pé", series: 3, reps: "12–15", rir: "RIR 0–1" }
+      { nome: "Agachamento no Smith", series: 4, reps: "5–6", rir: "RIR 1–2", musculos: "Quadríceps, glúteos, isquiotibiais", subs: ["Agachamento livre", "Agachamento no Hack", "Agachamento com halteres"] },
+      { nome: "Stiff", series: 3, reps: "6–8", rir: "RIR 1–2", musculos: "Isquiotibiais, glúteos, eretores da espinha", subs: ["Levantamento terra romeno", "Mesa flexora", "Good morning"] },
+      { nome: "Leg press 45°", series: 3, reps: "8–10", rir: "RIR 1–2", musculos: "Quadríceps, glúteos, adutores", subs: ["Leg press horizontal", "Agachamento búlgaro", "Afundo no Smith"] },
+      { nome: "Cadeira flexora", series: 2, reps: "10–12", rir: "RIR 1", musculos: "Isquiotibiais", subs: ["Mesa flexora", "Flexora em pé", "Stiff com halteres"] },
+      { nome: "Panturrilha em pé", series: 3, reps: "12–15", rir: "RIR 0–1", musculos: "Gastrocnêmio, sóleo", subs: ["Panturrilha no Smith", "Panturrilha no leg press", "Panturrilha unilateral"] }
     ] },
-  { id: "quarta", dia: "Quarta", nome: "Descanso ou Leve Opcional", tipo: "recuperação",
-    descanso: 60, banner: true,
+  { id: "quarta", dia: "Quarta", nome: "Descanso ou Leve Opcional", tipo: "recuperação", descanso: 60, banner: true,
     exercicios: [
-      { nome: "Panturrilha sentado", series: 2, reps: "15–20", rir: "leve", opcional: true },
-      { nome: "Abdômen na máquina ou prancha", series: 2, reps: "12–15 / 30–45s", rir: "leve", opcional: true },
-      { nome: "Rosca direta", series: 2, reps: "12–15", rir: "leve", opcional: true },
-      { nome: "Tríceps corda", series: 2, reps: "12–15", rir: "leve", opcional: true },
-      { nome: "Mobilidade de quadril e ombros", series: 1, reps: "10 min", rir: "livre", opcional: true }
+      { nome: "Panturrilha sentado", series: 2, reps: "15–20", rir: "leve", opcional: true, musculos: "Sóleo", subs: ["Panturrilha em pé", "Panturrilha no leg press"] },
+      { nome: "Abdômen na máquina ou prancha", series: 2, reps: "12–15 / 30–45s", rir: "leve", opcional: true, musculos: "Reto abdominal, transverso", subs: ["Abdominal supra", "Elevação de pernas", "Abdominal no cabo"] },
+      { nome: "Rosca direta", series: 2, reps: "12–15", rir: "leve", opcional: true, musculos: "Bíceps braquial, braquial", subs: ["Rosca alternada", "Rosca no cabo", "Rosca Scott"] },
+      { nome: "Tríceps corda", series: 2, reps: "12–15", rir: "leve", opcional: true, musculos: "Tríceps (todas as cabeças)", subs: ["Tríceps testa", "Tríceps banco", "Tríceps francês"] },
+      { nome: "Mobilidade de quadril e ombros", series: 1, reps: "10 min", rir: "livre", opcional: true, musculos: "Articulações e tecido conjuntivo", subs: ["Alongamento passivo", "Liberação miofascial"] }
     ] },
   { id: "quinta", dia: "Quinta", nome: "Upper B — Hipertrofia", tipo: "hipertrofia", descanso: 90,
     exercicios: [
-      { nome: "Supino inclinado com halteres", series: 3, reps: "8–12", rir: "RIR 1" },
-      { nome: "Remada unilateral", series: 3, reps: "8–12", rir: "RIR 1" },
-      { nome: "Supino reto na máquina", series: 3, reps: "8–12", rir: "RIR 1" },
-      { nome: "Puxada frontal", series: 3, reps: "8–12", rir: "RIR 1" },
-      { nome: "Elevação lateral", series: 3, reps: "12–20", rir: "RIR 0–1" },
-      { nome: "Rosca direta", series: 2, reps: "10–12", rir: "RIR 0–1" },
-      { nome: "Tríceps corda", series: 2, reps: "10–15", rir: "RIR 0–1" }
+      { nome: "Supino inclinado com halteres", series: 3, reps: "8–12", rir: "RIR 1", musculos: "Peitoral superior, deltoide anterior, tríceps", subs: ["Supino inclinado na máquina", "Supino inclinado no Smith", "Crucifixo inclinado"] },
+      { nome: "Remada unilateral", series: 3, reps: "8–12", rir: "RIR 1", musculos: "Latíssimo, romboides, bíceps", subs: ["Remada baixa unilateral", "Remada curvada com halteres", "Puxada unilateral"] },
+      { nome: "Supino reto na máquina", series: 3, reps: "8–12", rir: "RIR 1", musculos: "Peitoral maior, tríceps, deltoide anterior", subs: ["Supino reto no Smith", "Supino reto com halteres", "Crossover"] },
+      { nome: "Puxada frontal", series: 3, reps: "8–12", rir: "RIR 1", musculos: "Latíssimo do dorso, bíceps", subs: ["Barra fixa", "Puxada no triângulo", "Pulldown com corda"] },
+      { nome: "Elevação lateral", series: 3, reps: "12–20", rir: "RIR 0–1", musculos: "Deltoide lateral", subs: ["Elevação lateral na máquina", "Elevação lateral com cabo", "Elevação lateral inclinado"] },
+      { nome: "Rosca direta", series: 2, reps: "10–12", rir: "RIR 0–1", musculos: "Bíceps braquial", subs: ["Rosca alternada", "Rosca no cabo", "Rosca Scott"] },
+      { nome: "Tríceps corda", series: 2, reps: "10–15", rir: "RIR 0–1", musculos: "Tríceps", subs: ["Tríceps testa", "Tríceps banco", "Tríceps francês"] }
     ] },
   { id: "sexta", dia: "Sexta", nome: "Lower B — Hipertrofia", tipo: "hipertrofia", descanso: 90,
     exercicios: [
-      { nome: "Agachamento Hack", series: 3, reps: "8–12", rir: "RIR 1" },
-      { nome: "Cadeira extensora", series: 3, reps: "10–15", rir: "RIR 0–1" },
-      { nome: "Elevação pélvica", series: 3, reps: "10–15", rir: "RIR 1" },
-      { nome: "Cadeira flexora", series: 3, reps: "10–12", rir: "RIR 1" },
-      { nome: "Cadeira abdutora", series: 2, reps: "15–20", rir: "RIR 0–1" },
-      { nome: "Panturrilha sentado", series: 3, reps: "15–20", rir: "RIR 0–1" }
+      { nome: "Agachamento Hack", series: 3, reps: "8–12", rir: "RIR 1", musculos: "Quadríceps, glúteos", subs: ["Agachamento livre", "Agachamento no Smith", "Leg press 45°"] },
+      { nome: "Cadeira extensora", series: 3, reps: "10–15", rir: "RIR 0–1", musculos: "Quadríceps", subs: ["Cadeira extensora unilateral", "Agachamento Sissy", "Leg press com pés baixos"] },
+      { nome: "Elevação pélvica", series: 3, reps: "10–15", rir: "RIR 1", musculos: "Glúteos, isquiotibiais", subs: ["Glúteo no cabo", "Coice na máquina", "Levantamento terra sumô"] },
+      { nome: "Cadeira flexora", series: 3, reps: "10–12", rir: "RIR 1", musculos: "Isquiotibiais", subs: ["Mesa flexora", "Flexora em pé", "Stiff"] },
+      { nome: "Cadeira abdutora", series: 2, reps: "15–20", rir: "RIR 0–1", musculos: "Glúteo médio, glúteo mínimo", subs: ["Abdução no cabo", "Abdução em pé com elástico", "Passada lateral"] },
+      { nome: "Panturrilha sentado", series: 3, reps: "15–20", rir: "RIR 0–1", musculos: "Sóleo", subs: ["Panturrilha em pé", "Panturrilha no leg press", "Panturrilha unilateral"] }
     ] }
 ];
 
-/* ============ ESTADO ============ */
-const STORAGE_KEY = "treinoApp_v2";
-const AUTO_REST_KEY = "treinoAutoRest_v2";
+/* ============ ESTADO (CORRIGIDO) ============ */
+const STORAGE_KEY = "treinoApp_v3";
+const AUTO_REST_KEY = "treinoAutoRest_v3";
 
 let state = loadState();
 let currentTab = state._tab || getToday();
@@ -279,19 +240,26 @@ function saveState() {
   state._tab = currentTab;
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
 }
+
 function ensureData() {
   if (!state.current) state.current = {};
   if (!state.history) state.history = [];
+  
   treinos.forEach(t => {
     if (!state.current[t.id]) state.current[t.id] = {};
     const c = state.current[t.id];
+    
+    if (!Array.isArray(c.checks)) c.checks = [];
+    if (!Array.isArray(c.weights)) c.weights = [];
+    if (!Array.isArray(c.reps)) c.reps = [];
+    if (!c.customNames) c.customNames = {};
+
     t.exercicios.forEach((e, i) => {
-      if (!Array.isArray(c.checks?.[i])) c.checks = c.checks || [];
       if (!Array.isArray(c.checks[i])) c.checks[i] = Array(e.series).fill(false);
-      if (!Array.isArray(c.weights?.[i])) c.weights = c.weights || [];
       if (!Array.isArray(c.weights[i])) c.weights[i] = Array(e.series).fill("");
-      if (!Array.isArray(c.reps?.[i])) c.reps = c.reps || [];
       if (!Array.isArray(c.reps[i])) c.reps[i] = Array(e.series).fill("");
+      
+      // Garante tamanho correto
       c.checks[i] = c.checks[i].slice(0, e.series);
       c.weights[i] = c.weights[i].slice(0, e.series);
       c.reps[i] = c.reps[i].slice(0, e.series);
@@ -385,11 +353,12 @@ function renderWorkout() {
     const allDone = cur.checks[ei].every(Boolean);
     card.className = "exercise" + (allDone ? " completed" : "");
 
+    const customName = cur.customNames[ei] || ex.nome;
     const last = getLastSessionForExercise(ex.nome);
+    
     let lastHtml = "";
     if (last && last.sets.filter(s => s.done).length) {
-      const txt = last.sets.filter(s => s.done)
-        .map(s => `${s.weight}×${s.reps}`).join(" · ");
+      const txt = last.sets.filter(s => s.done).map(s => `${s.weight}×${s.reps}`).join(" · ");
       lastHtml = `<div class="last-session has">Última (${fmtDate(last.date)}): ${txt}</div>`;
     } else {
       lastHtml = `<div class="last-session">Sem sessão anterior</div>`;
@@ -397,11 +366,15 @@ function renderWorkout() {
 
     card.innerHTML = `
       <div class="exercise-head">
-        <div class="exercise-name">
-          ${ex.nome}
-          ${ex.opcional ? '<span class="exercise-badge opt">OPCIONAL</span>' : ""}
+        <div class="exercise-title-wrap">
+          <div class="exercise-name">
+            ${customName}
+            ${ex.opcional ? '<span class="exercise-badge opt">OPCIONAL</span>' : ""}
+            ${ex.subs && ex.subs.length > 0 ? `<button class="btn-swap" data-ei="${ei}" title="Trocar exercício">🔄</button>` : ""}
+          </div>
+          <div class="exercise-muscles">${ex.musculos}</div>
         </div>
-        <div class="exercise-meta">${ex.series}× · ${ex.reps} · ${ex.rir}</div>
+        <div class="exercise-meta">${ex.series}× · ${ex.reps}</div>
       </div>
       <div class="exercise-sub">
         ${lastHtml}
@@ -416,16 +389,15 @@ function renderWorkout() {
       const done = cur.checks[ei][si];
       row.innerHTML = `
         <button class="set-check${done ? " done" : ""}">${done ? "✓" : si + 1}</button>
-        <input class="set-input inp-weight" type="number" inputmode="decimal" step="0.5"
-               placeholder="kg" value="${cur.weights[ei][si] || ""}">
+        <input class="set-input inp-weight" type="number" inputmode="decimal" step="0.5" placeholder="kg" value="${cur.weights[ei][si] || ""}">
         <span class="set-unit">kg</span>
         <span class="set-x">×</span>
-        <input class="set-input inp-reps" type="number" inputmode="numeric"
-               placeholder="reps" value="${cur.reps[ei][si] || ""}">
+        <input class="set-input inp-reps" type="number" inputmode="numeric" placeholder="reps" value="${cur.reps[ei][si] || ""}">
         <span class="set-unit">reps</span>`;
       const chk = row.querySelector(".set-check");
       const wIn = row.querySelector(".inp-weight");
       const rIn = row.querySelector(".inp-reps");
+      
       chk.onclick = () => toggleCheck(t, ei, si);
       wIn.onchange = () => { cur.weights[ei][si] = wIn.value; saveState(); };
       rIn.onchange = () => { cur.reps[ei][si] = rIn.value; saveState(); };
@@ -441,8 +413,13 @@ function renderWorkout() {
       });
       saveState();
       render();
-      showToast("+2,5 kg em " + ex.nome.split(" ").slice(0, 2).join(" "));
+      showToast("+2,5 kg em " + customName.split(" ").slice(0, 2).join(" "));
     };
+
+    const swapBtn = card.querySelector(".btn-swap");
+    if (swapBtn) {
+      swapBtn.onclick = () => openSwapModal(t, ei, ex);
+    }
 
     main.appendChild(card);
   });
@@ -454,6 +431,53 @@ function renderWorkout() {
   main.appendChild(finish);
 }
 
+/* ============ MODAL DE TROCA ============ */
+function openSwapModal(t, ei, ex) {
+  const cur = state.current[t.id];
+  const currentName = cur.customNames[ei] || ex.nome;
+  const options = [ex.nome, ...(ex.subs || [])];
+  
+  const modalBody = document.getElementById("modalBody");
+  modalBody.innerHTML = "";
+  
+  options.forEach(optName => {
+    const btn = document.createElement("button");
+    btn.className = "modal-option" + (optName === currentName ? " current" : "");
+    btn.textContent = optName;
+    btn.onclick = () => {
+      if (optName === ex.nome) {
+        delete cur.customNames[ei];
+      } else {
+        cur.customNames[ei] = optName;
+      }
+      saveState();
+      closeModal();
+      render();
+      showToast("Exercício alterado!");
+    };
+    modalBody.appendChild(btn);
+  });
+
+  document.getElementById("btnRestore").onclick = () => {
+    delete cur.customNames[ei];
+    saveState();
+    closeModal();
+    render();
+    showToast("Exercício original restaurado");
+  };
+
+  document.getElementById("modalOverlay").classList.add("open");
+}
+
+function closeModal() {
+  document.getElementById("modalOverlay").classList.remove("open");
+}
+document.getElementById("modalClose").onclick = closeModal;
+document.getElementById("modalOverlay").onclick = (e) => {
+  if (e.target.id === "modalOverlay") closeModal();
+};
+
+/* ============ RESTO DA LÓGICA ============ */
 function renderHistory() {
   const main = document.getElementById("main");
   main.innerHTML = "";
@@ -467,14 +491,11 @@ function renderHistory() {
   if (state.history.length === 0) {
     const empty = document.createElement("div");
     empty.className = "history-empty";
-    empty.innerHTML = `Nenhum treino arquivado ainda.<br><br>
-      Faça um treino e clique em <strong>"Finalizar e arquivar treino"</strong>
-      para começar a registrar sua evolução. 📈`;
+    empty.innerHTML = `Nenhum treino arquivado ainda.<br><br>Faça um treino e clique em <strong>"Finalizar e arquivar treino"</strong> para começar a registrar sua evolução. 📈`;
     main.appendChild(empty);
     return;
   }
 
-  // Chart card
   const allExNames = new Set();
   treinos.forEach(t => t.exercicios.forEach(e => allExNames.add(e.nome)));
   const options = [...allExNames].sort();
@@ -497,23 +518,18 @@ function renderHistory() {
     saveState();
     updateChart(canvas, select.value);
   };
-  // Draw after layout
   requestAnimationFrame(() => updateChart(canvas, select.value));
 
-  // History list
-  const sorted = [...state.history].sort((a, b) =>
-    b.date.localeCompare(a.date) || b.id - a.id);
-
+  const sorted = [...state.history].sort((a, b) => b.date.localeCompare(a.date) || b.id - a.id);
   sorted.forEach(entry => {
     const item = document.createElement("div");
     item.className = "history-item";
     const totalVol = entry.exercises.reduce((s, e) => s + (e.volume || 0), 0);
-    const totalEx = entry.exercises.length;
     item.innerHTML = `
       <div class="history-summary">
         <div>
           <div class="history-date">${fmtDate(entry.date)}</div>
-          <div class="history-info">${entry.dayName} · ${entry.workoutName} · ${totalEx} exerc. · ${Math.round(totalVol)} kg volume</div>
+          <div class="history-info">${entry.dayName} · ${entry.workoutName} · ${entry.exercises.length} exerc. · ${Math.round(totalVol)} kg vol.</div>
         </div>
         <div class="history-chevron">▸</div>
       </div>
@@ -521,8 +537,7 @@ function renderHistory() {
         ${entry.exercises.map(ex => `
           <div class="history-ex">
             <div class="history-ex-name">${ex.name}</div>
-            <div class="history-ex-sets">${ex.sets.filter(s => s.done)
-              .map(s => `${s.weight}kg × ${s.reps}`).join(" &nbsp;·&nbsp; ") || "—"}</div>
+            <div class="history-ex-sets">${ex.sets.filter(s => s.done).map(s => `${s.weight}kg × ${s.reps}`).join(" &nbsp;·&nbsp; ") || "—"}</div>
           </div>`).join("")}
         <button class="history-delete" data-id="${entry.id}">🗑 Apagar sessão</button>
       </div>`;
@@ -539,7 +554,6 @@ function renderHistory() {
   });
 }
 
-/* ============ CHART ============ */
 function updateChart(canvas, exerciseName) {
   const points = [];
   state.history.forEach(entry => {
@@ -560,18 +574,13 @@ function drawChart(canvas, points) {
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   const W = rect.width, H = rect.height;
   ctx.clearRect(0, 0, W, H);
-
   const pad = { top: 15, right: 15, bottom: 30, left: 45 };
   const cw = W - pad.left - pad.right;
   const ch = H - pad.top - pad.bottom;
 
   if (points.length === 0) {
-    ctx.fillStyle = "#7f889e";
-    ctx.font = "13px sans-serif";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText("Sem dados para este exercício", W / 2, H / 2);
-    return;
+    ctx.fillStyle = "#7f889e"; ctx.font = "13px sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "middle";
+    ctx.fillText("Sem dados para este exercício", W / 2, H / 2); return;
   }
 
   const values = points.map(p => p.value);
@@ -581,44 +590,25 @@ function drawChart(canvas, points) {
   const yMin = Math.max(0, minV - padV);
   const yMax = maxV + padV;
 
-  // Grid
-  ctx.strokeStyle = "#262b38";
-  ctx.fillStyle = "#7f889e";
-  ctx.font = "11px sans-serif";
-  ctx.textAlign = "right";
-  ctx.textBaseline = "middle";
+  ctx.strokeStyle = "#262b38"; ctx.fillStyle = "#7f889e"; ctx.font = "11px sans-serif"; ctx.textAlign = "right"; ctx.textBaseline = "middle";
   const gridLines = 4;
   for (let i = 0; i <= gridLines; i++) {
     const y = pad.top + (ch / gridLines) * i;
     const val = yMax - ((yMax - yMin) / gridLines) * i;
-    ctx.beginPath();
-    ctx.moveTo(pad.left, y);
-    ctx.lineTo(W - pad.right, y);
-    ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(W - pad.right, y); ctx.stroke();
     ctx.fillText(val.toFixed(1).replace(".0", ""), pad.left - 6, y);
   }
 
-  const getX = i => points.length === 1
-    ? pad.left + cw / 2
-    : pad.left + (i / (points.length - 1)) * cw;
+  const getX = i => points.length === 1 ? pad.left + cw / 2 : pad.left + (i / (points.length - 1)) * cw;
   const getY = v => pad.top + ch - ((v - yMin) / (yMax - yMin)) * ch;
 
-  // Area fill
   const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + ch);
-  grad.addColorStop(0, "rgba(34,197,94,0.25)");
-  grad.addColorStop(1, "rgba(34,197,94,0)");
-  ctx.fillStyle = grad;
-  ctx.beginPath();
-  ctx.moveTo(getX(0), pad.top + ch);
+  grad.addColorStop(0, "rgba(34,197,94,0.25)"); grad.addColorStop(1, "rgba(34,197,94,0)");
+  ctx.fillStyle = grad; ctx.beginPath(); ctx.moveTo(getX(0), pad.top + ch);
   points.forEach((p, i) => ctx.lineTo(getX(i), getY(p.value)));
-  ctx.lineTo(getX(points.length - 1), pad.top + ch);
-  ctx.closePath();
-  ctx.fill();
+  ctx.lineTo(getX(points.length - 1), pad.top + ch); ctx.closePath(); ctx.fill();
 
-  // Line
-  ctx.strokeStyle = "#22c55e";
-  ctx.lineWidth = 2.5;
-  ctx.lineJoin = "round";
+  ctx.strokeStyle = "#22c55e"; ctx.lineWidth = 2.5; ctx.lineJoin = "round";
   ctx.beginPath();
   points.forEach((p, i) => {
     const x = getX(i), y = getY(p.value);
@@ -626,23 +616,14 @@ function drawChart(canvas, points) {
   });
   ctx.stroke();
 
-  // Points
   points.forEach((p, i) => {
     const x = getX(i), y = getY(p.value);
-    ctx.beginPath();
-    ctx.arc(x, y, 4.5, 0, Math.PI * 2);
-    ctx.fillStyle = "#22c55e";
-    ctx.fill();
-    ctx.strokeStyle = "#0b0d12";
-    ctx.lineWidth = 2;
-    ctx.stroke();
+    ctx.beginPath(); ctx.arc(x, y, 4.5, 0, Math.PI * 2);
+    ctx.fillStyle = "#22c55e"; ctx.fill();
+    ctx.strokeStyle = "#0b0d12"; ctx.lineWidth = 2; ctx.stroke();
   });
 
-  // X labels
-  ctx.fillStyle = "#7f889e";
-  ctx.font = "10px sans-serif";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "top";
+  ctx.fillStyle = "#7f889e"; ctx.font = "10px sans-serif"; ctx.textAlign = "center"; ctx.textBaseline = "top";
   const step = Math.max(1, Math.ceil(points.length / 6));
   points.forEach((p, i) => {
     if (i % step === 0 || i === points.length - 1) {
@@ -652,7 +633,6 @@ function drawChart(canvas, points) {
   });
 }
 
-/* ============ LÓGICA ============ */
 function toggleCheck(t, ei, si) {
   const cur = state.current[t.id];
   const prev = cur.checks[ei][si];
@@ -672,7 +652,8 @@ function resetDay(id) {
   state.current[id] = {
     checks: t.exercicios.map(e => Array(e.series).fill(false)),
     weights: t.exercicios.map(e => Array(e.series).fill("")),
-    reps: t.exercicios.map(e => Array(e.series).fill(""))
+    reps: t.exercicios.map(e => Array(e.series).fill("")),
+    customNames: {}
   };
   saveState();
   render();
@@ -696,7 +677,8 @@ function finalizarTreino(t) {
       const doneSets = sets.filter(s => s.done);
       const maxWeight = Math.max(...doneSets.map(s => s.weight));
       const volume = doneSets.reduce((a, s) => a + s.weight * s.reps, 0);
-      exercises.push({ name: ex.nome, sets, maxWeight, volume });
+      const finalName = cur.customNames[ei] || ex.nome;
+      exercises.push({ name: finalName, sets, maxWeight, volume });
     }
   });
 
@@ -716,6 +698,7 @@ function finalizarTreino(t) {
   });
 
   cur.checks = t.exercicios.map(e => Array(e.series).fill(false));
+  cur.customNames = {}; // Reseta os nomes trocados para a próxima sessão
   saveState();
   render();
   showToast("Treino arquivado! 💪");
@@ -725,7 +708,7 @@ function finalizarTreino(t) {
 function getLastSessionForExercise(exerciseName) {
   for (let i = state.history.length - 1; i >= 0; i--) {
     const entry = state.history[i];
-    const ex = entry.exercises.find(e => e.name === exerciseName);
+    const ex = entry.exercises.find(e => e.name === exerciseName || e.name.includes(exerciseName));
     if (ex) return { date: entry.date, sets: ex.sets };
   }
   return null;
@@ -757,10 +740,7 @@ function updateDisplay() {
   document.title = (timer.running ? "⏱ " : "") + timerDisplay.textContent + " · Treino";
 }
 function setPreset(sec) {
-  stopTimer();
-  timer.duration = sec;
-  timer.remaining = sec;
-  updateDisplay();
+  stopTimer(); timer.duration = sec; timer.remaining = sec; updateDisplay();
   document.querySelectorAll(".preset[data-sec]").forEach(b => {
     b.classList.toggle("active", parseInt(b.dataset.sec) === sec);
   });
@@ -781,12 +761,8 @@ function tick() {
   if (timer.remaining <= 0) { stopTimer(); onTimerEnd(); }
 }
 function stopTimer() {
-  timer.running = false;
-  clearInterval(timer.interval);
-  timer.interval = null;
-  startPauseBtn.textContent = "▶";
-  timerBar.classList.remove("running");
-  updateDisplay();
+  timer.running = false; clearInterval(timer.interval); timer.interval = null;
+  startPauseBtn.textContent = "▶"; timerBar.classList.remove("running"); updateDisplay();
 }
 function toggleTimer() {
   if (timer.running) {
@@ -795,8 +771,7 @@ function toggleTimer() {
   } else startTimer();
 }
 function onTimerEnd() {
-  timerBar.classList.add("ringing");
-  setTimeout(() => timerBar.classList.remove("ringing"), 3000);
+  timerBar.classList.add("ringing"); setTimeout(() => timerBar.classList.remove("ringing"), 3000);
   beep(0); beep(250); beep(500);
   if (navigator.vibrate) navigator.vibrate([250, 100, 250, 100, 250]);
 }
@@ -805,10 +780,8 @@ function beep(delay) {
     try {
       const Ctx = window.AudioContext || window.webkitAudioContext;
       if (!Ctx) return;
-      const ctx = new Ctx();
-      const o = ctx.createOscillator(), g = ctx.createGain();
-      o.connect(g); g.connect(ctx.destination);
-      o.type = "sine"; o.frequency.value = 880;
+      const ctx = new Ctx(); const o = ctx.createOscillator(); const g = ctx.createGain();
+      o.connect(g); g.connect(ctx.destination); o.type = "sine"; o.frequency.value = 880;
       g.gain.setValueAtTime(0.0001, ctx.currentTime);
       g.gain.exponentialRampToValueAtTime(0.25, ctx.currentTime + 0.02);
       g.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.3);
@@ -817,17 +790,12 @@ function beep(delay) {
   }, delay);
 }
 startPauseBtn.onclick = toggleTimer;
-document.getElementById("resetTimer").onclick = () => {
-  stopTimer(); timer.remaining = timer.duration; updateDisplay();
-};
+document.getElementById("resetTimer").onclick = () => { stopTimer(); timer.remaining = timer.duration; updateDisplay(); };
 document.querySelectorAll(".timer-btn[data-action]").forEach(btn => {
   btn.onclick = () => {
     const d = parseInt(btn.dataset.action);
     if (d > 0) { timer.remaining += d; if (timer.running) timer.endTime += d * 1000; }
-    else {
-      timer.remaining = Math.max(0, timer.remaining + d);
-      if (timer.running) timer.endTime = Math.max(Date.now(), timer.endTime + d * 1000);
-    }
+    else { timer.remaining = Math.max(0, timer.remaining + d); if (timer.running) timer.endTime = Math.max(Date.now(), timer.endTime + d * 1000); }
     updateDisplay();
   };
 });
@@ -836,38 +804,31 @@ document.querySelectorAll(".preset[data-sec]").forEach(btn => {
 });
 const autoRestEl = document.getElementById("autoRest");
 autoRestEl.checked = autoRest;
-autoRestEl.onchange = () => {
-  autoRest = autoRestEl.checked;
-  localStorage.setItem(AUTO_REST_KEY, autoRest);
-};
+autoRestEl.onchange = () => { autoRest = autoRestEl.checked; localStorage.setItem(AUTO_REST_KEY, autoRest); };
 document.getElementById("btnResetAll").onclick = () => {
-  if (!confirm("Apagar TODOS os dados (treinos, cargas e histórico)?\nEssa ação não pode ser desfeita.")) return;
+  if (!confirm("Apagar TODOS os dados?\nEssa ação não pode ser desfeita.")) return;
   state = { current: {}, history: [] };
-  ensureData();
-  currentTab = getToday();
-  saveState();
-  render();
-  showToast("Todos os dados apagados");
+  ensureData(); currentTab = getToday(); saveState(); render(); showToast("Todos os dados apagados");
 };
 
-/* ============ SERVICE WORKER (PWA OFFLINE) ============ */
+/* ============ PWA OFFLINE ============ */
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("./sw.js").then(
       () => console.log("Service Worker registrado ✅"),
-      err => console.log("SW não registrado (precisa de http/https):", err.message)
+      err => console.log("SW não registrado:", err.message)
     );
   });
 }
 
 /* ============ INIT ============ */
 ensureData();
-if (currentTab === "historico") {
-  // ok
-} else {
+if (currentTab !== "historico") {
   const d = treinos.find(x => x.id === currentTab);
-  if (d) setPreset(d.descanso);
-  else currentTab = getToday();
+  if (d) setPreset(d.descanso); else currentTab = getToday();
 }
 updateDisplay();
 render();
+</script>
+</body>
+</html>
