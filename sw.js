@@ -1,4 +1,4 @@
-const CACHE = "treino-pwa-v1";
+const CACHE = "treino-pwa-v3";
 const ASSETS = ["./", "./index.html", "./manifest.json"];
 
 self.addEventListener("install", (e) => {
