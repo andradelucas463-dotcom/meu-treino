@@ -1,0 +1,20 @@
+{
+  "name": "Meu Treino",
+  "short_name": "Treino",
+  "description": "App de treino com progressão de carga e gráfico",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%230b0d12'/%3E%3Cg fill='%2322c55e'%3E%3Crect x='76' y='206' width='60' height='100' rx='14'/%3E%3Crect x='376' y='206' width='60' height='100' rx='14'/%3E%3Crect x='136' y='246' width='240' height='20' rx='6'/%3E%3C/g%3E%3C/svg%3E",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
